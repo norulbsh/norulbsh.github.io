@@ -32,8 +32,12 @@ body {
    HEADER - ELEGANT ART GALLERY STYLE
 ========================================================= */
 
+/* ================================
+   HEADER
+================================ */
+
 header {
-    background: rgba(243, 235, 221, 0.96);
+    background: #245B5A;
     padding: 8px 7%;
     display: flex;
     justify-content: space-between;
@@ -41,10 +45,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-
-    box-shadow: 0 3px 18px rgba(70, 45, 30, 0.12);
-
-    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
 }
 
 .logo img {
@@ -60,7 +61,7 @@ nav {
 }
 
 nav a {
-    color: #5B3321;
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
@@ -68,9 +69,8 @@ nav a {
 }
 
 nav a:hover {
-    color: #B8863B;
+    color: #D7A65A;
 }
-
 
 /* =========================================================
    HERO — ART GALLERY STYLE
