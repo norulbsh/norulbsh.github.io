@@ -1,0 +1,586 @@
+/* =========================================================
+   NORULBSH CREATIVE STUDIO
+   Gallery / Art Studio Theme
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #403832;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(190,150,110,0.10), transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(150,110,80,0.08), transparent 25%),
+        #f7f3ec;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    background: rgba(67, 39, 25, 0.97);
+    padding: 10px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    backdrop-filter: blur(8px);
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: #fff8ef;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d7a65a;
+}
+
+
+/* =========================================================
+   HERO — ART GALLERY STYLE
+========================================================= */
+
+.hero {
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.92),
+            rgba(242,232,218,0.88)
+        );
+}
+
+/* Decorative paint circles */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(184,134,59,0.10);
+    top: -160px;
+    left: -120px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: rgba(107,62,38,0.08);
+    bottom: -150px;
+    right: -100px;
+}
+
+.hero-content {
+    max-width: 900px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 58px;
+    color: #5b3321;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.hero h2 {
+    font-size: 26px;
+    font-weight: normal;
+    color: #a47732;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 720px;
+    margin: 0 auto 30px;
+    color: #5d554f;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.button {
+    display: inline-block;
+    background: #a47732;
+    color: white;
+    padding: 13px 30px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(70,40,20,0.18);
+    margin: 5px;
+}
+
+.button:hover {
+    background: #704225;
+    transform: translateY(-3px);
+}
+
+.whatsapp-button {
+    background: #25D366;
+}
+
+.whatsapp-button:hover {
+    background: #1DA851;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    color: #5b3321;
+    font-size: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.section-title p {
+    color: #8a7770;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   ARTISTIC DIVIDER
+========================================================= */
+
+.section-title::after {
+    content: "✦";
+    display: block;
+    color: #b8863b;
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.about p {
+    margin-bottom: 18px;
+}
+
+.about-highlight {
+    margin-top: 35px;
+    padding: 30px;
+    background: #eee4d8;
+    border-left: 5px solid #b8863b;
+    border-radius: 3px;
+    font-style: italic;
+    box-shadow: 0 8px 25px rgba(80,50,30,0.07);
+}
+
+
+/* =========================================================
+   SERVICES — GALLERY CARDS
+========================================================= */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: rgba(255,255,255,0.90);
+    padding: 40px 28px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(70,45,30,0.10);
+    border: 1px solid #e2d5c6;
+    position: relative;
+    transition: 0.35s;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    height: 3px;
+    background: #b8863b;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(70,45,30,0.16);
+}
+
+.card-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #5b3321;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #665b55;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+#gallery {
+    background:
+        linear-gradient(
+            rgba(245,240,232,0.96),
+            rgba(245,240,232,0.96)
+        );
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.gallery-item {
+    height: 300px;
+    background: #e8ded2;
+    overflow: hidden;
+    border: 10px solid #fff;
+    box-shadow: 0 8px 25px rgba(50,30,20,0.15);
+    position: relative;
+    transition: 0.35s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-7px) rotate(-0.5deg);
+    box-shadow: 0 18px 35px rgba(50,30,20,0.22);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(55,32,20,0.88);
+    color: white;
+    padding: 11px;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   QUOTE SECTION
+========================================================= */
+
+.quote-section {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(184,134,59,0.15),
+            transparent 35%
+        ),
+        #eee2d5;
+    text-align: center;
+}
+
+.quote-section h2 {
+    color: #5b3321;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.quote-section p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+    background:
+        linear-gradient(
+            135deg,
+            #432719,
+            #6b3e26
+        );
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta::before {
+    content: "✦";
+    position: absolute;
+    font-size: 180px;
+    opacity: 0.05;
+    left: 5%;
+    top: -40px;
+}
+
+.cta::after {
+    content: "✦";
+    position: absolute;
+    font-size: 150px;
+    opacity: 0.05;
+    right: 8%;
+    bottom: -50px;
+}
+
+.cta h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #f5e8da;
+}
+
+.cta .button {
+    background: #d7a65a;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-box {
+    background: rgba(255,255,255,0.92);
+    padding: 45px;
+    border: 1px solid #e2d5c6;
+    box-shadow: 0 10px 30px rgba(70,45,30,0.10);
+}
+
+.contact-box p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contact-box strong {
+    color: #5b3321;
+}
+
+.contact-box a {
+    color: #6b3e26;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #2d1a12;
+    color: #f5e8da;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    color: #d7a65a;
+    margin-bottom: 8px;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 5%;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .services,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 280px;
+    }
+
+    .section-title h2,
+    .cta h2,
+    .quote-section h2 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+
+    .whatsapp-float {
+        bottom: 18px;
+        right: 18px;
+        padding: 11px 16px;
+        font-size: 14px;
+    }
+}
