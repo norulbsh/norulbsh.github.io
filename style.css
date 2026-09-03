@@ -36,40 +36,50 @@ body {
    HEADER
 ================================ */
 
+/* =========================================
+   NORULBSH CREATIVE STUDIO - HEADER
+========================================= */
+
 header {
-    background: #245B5A;
+    background: #B97867;
     padding: 8px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+
+    box-shadow: 0 4px 18px rgba(80, 45, 35, 0.18);
 }
 
+/* Logo */
 .logo img {
     height: 58px;
     width: auto;
     display: block;
 }
 
+/* Navigation */
 nav {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 30px;
 }
 
 nav a {
-    color: #FFFFFF;
+    color: #FFF8F2;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
+/* Navigation hover */
 nav a:hover {
-    color: #D7A65A;
+    color: #F2D19B;
+    transform: translateY(-2px);
 }
 
 /* =========================================================
