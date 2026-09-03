@@ -89,174 +89,104 @@ nav a:hover {
 /* =========================================================
    HERO — ART GALLERY STYLE
 ========================================================= */
+/* =========================================================
+   NORULBSH CREATIVE STUDIO
+   HOME / HERO - ART GALLERY STYLE
+========================================================= */
 
 .hero {
-    min-height: 82vh;
+    min-height: 78vh;
+    position: relative;
+    overflow: hidden;
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 100px 20px;
-    position: relative;
-    overflow: hidden;
+
+    padding: 70px 20px;
 
     background:
         linear-gradient(
             135deg,
-            rgba(255,255,255,0.92),
-            rgba(242,232,218,0.88)
+            rgba(250, 245, 237, 0.96),
+            rgba(241, 230, 214, 0.96)
         );
 }
 
-/* Decorative paint circles */
-
+/* Large artistic brush stroke - left */
 .hero::before {
     content: "";
     position: absolute;
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
-    background: rgba(184,134,59,0.10);
-    top: -160px;
-    left: -120px;
-}
 
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    background: rgba(107,62,38,0.08);
-    bottom: -150px;
-    right: -100px;
-}
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    width: 620px;
+    height: 190px;
 
-/* =========================================================
-   HERO - NORULBSH ART GALLERY
-========================================================= */
-
-.hero {
-    min-height: 82vh;
-    position: relative;
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    padding: 100px 20px;
+    left: -180px;
+    top: 150px;
 
     background:
-        /* subtle canvas texture */
-        repeating-linear-gradient(
-            0deg,
-            rgba(120, 85, 55, 0.025) 0px,
-            rgba(120, 85, 55, 0.025) 1px,
-            transparent 1px,
-            transparent 4px
-        ),
-        repeating-linear-gradient(
+        linear-gradient(
             90deg,
-            rgba(120, 85, 55, 0.02) 0px,
-            rgba(120, 85, 55, 0.02) 1px,
-            transparent 1px,
-            transparent 5px
-        ),
-        #f5eee4;
+            rgba(184, 134, 59, 0.16),
+            rgba(181, 111, 91, 0.12),
+            transparent
+        );
+
+    border-radius: 50%;
+    transform: rotate(-15deg);
+
+    filter: blur(2px);
 }
 
-
-/* =========================================================
-   LARGE ABSTRACT PAINT STROKE - LEFT
-========================================================= */
-
-.hero::before {
+/* Large artistic brush stroke - right */
+.hero::after {
     content: "";
     position: absolute;
 
     width: 520px;
-    height: 180px;
+    height: 170px;
 
-    left: -120px;
-    top: 120px;
+    right: -170px;
+    bottom: 120px;
 
     background:
         linear-gradient(
-            100deg,
-            rgba(170, 100, 70, 0.18),
-            rgba(190, 135, 65, 0.10),
-            transparent
+            90deg,
+            transparent,
+            rgba(181, 111, 91, 0.12),
+            rgba(184, 134, 59, 0.16)
         );
 
+    border-radius: 50%;
     transform: rotate(-18deg);
 
-    border-radius: 45% 55% 40% 60%;
-
-    filter: blur(1px);
+    filter: blur(2px);
 }
 
 
-/* =========================================================
-   ABSTRACT PAINT STROKE - RIGHT
-========================================================= */
-
-.hero::after {
-    content: "";
-    position: absolute;
-
-    width: 500px;
-    height: 200px;
-
-    right: -130px;
-    bottom: 100px;
-
-    background:
-        linear-gradient(
-            100deg,
-            transparent,
-            rgba(120, 70, 45, 0.10),
-            rgba(184, 134, 59, 0.20)
-        );
-
-    transform: rotate(-22deg);
-
-    border-radius: 55% 45% 60% 40%;
-
-    filter: blur(1px);
-}
-
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
-
+/* Main artwork frame */
 .hero-content {
-    max-width: 900px;
+    max-width: 1050px;
+    width: 90%;
 
     position: relative;
     z-index: 5;
 
-    padding: 50px 60px;
+    padding: 55px 70px;
 
-    background:
-        rgba(255, 252, 247, 0.78);
+    background: rgba(255, 252, 247, 0.82);
 
-    border: 1px solid rgba(184, 134, 59, 0.25);
+    border: 1px solid rgba(184, 134, 59, 0.30);
 
     box-shadow:
-        0 25px 60px rgba(70, 45, 30, 0.12);
+        0 20px 50px rgba(70, 45, 30, 0.12);
 
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(5px);
 }
 
 
-/* =========================================================
-   ARTISTIC FRAME
-========================================================= */
-
+/* Inner gold frame */
 .hero-content::before {
     content: "";
 
@@ -267,97 +197,132 @@ nav a:hover {
     right: 15px;
     bottom: 15px;
 
-    border: 1px solid rgba(184, 134, 59, 0.22);
+    border: 1px solid rgba(184, 134, 59, 0.25);
 
     pointer-events: none;
 }
 
 
-/* =========================================================
-   HERO TITLE
-========================================================= */
+/* Small artistic label */
+.hero-content::after {
+    content: "PERSONALISED ART  •  MEMORY  •  CREATIVITY";
 
+    position: absolute;
+
+    top: -13px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #F5EEE4;
+
+    padding: 4px 18px;
+
+    color: #B8863B;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+
+    z-index: 10;
+}
+
+
+/* Main title */
 .hero h1 {
-    font-size: 58px;
+    font-size: 52px;
 
-    color: #5b3321;
+    color: #5B3321;
 
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+
+    line-height: 1.15;
 
     position: relative;
     z-index: 2;
 }
 
 
-/* =========================================================
-   GOLD TAGLINE
-========================================================= */
-
+/* Subtitle */
 .hero h2 {
-    font-size: 27px;
+    font-size: 25px;
 
     font-weight: normal;
 
-    color: #b27d2f;
+    color: #B27D2F;
 
-    margin-bottom: 22px;
-
-    letter-spacing: 1px;
-
-    position: relative;
-    z-index: 2;
-}
-
-
-/* =========================================================
-   HERO DESCRIPTION
-========================================================= */
-
-.hero p {
-    font-size: 19px;
-
-    max-width: 720px;
-
-    margin: 0 auto 32px;
-
-    color: #514842;
-
-    position: relative;
-    z-index: 2;
-}
-
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-.hero-content {
-    max-width: 900px;
-    position: relative;
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: 58px;
-    color: #5b3321;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-}
-
-.hero h2 {
-    font-size: 26px;
-    font-weight: normal;
-    color: #a47732;
     margin-bottom: 20px;
-    letter-spacing: 1px;
+
+    letter-spacing: 2px;
+
+    position: relative;
+    z-index: 2;
 }
 
+
+/* Description */
 .hero p {
-    font-size: 19px;
-    max-width: 720px;
-    margin: 0 auto 30px;
-    color: #5d554f;
+    font-size: 18px;
+
+    max-width: 760px;
+
+    margin: 0 auto 28px;
+
+    color: #5A514B;
+
+    line-height: 1.8;
+
+    position: relative;
+    z-index: 2;
 }
 
 
+/* Buttons */
+.hero .button {
+    position: relative;
+    z-index: 5;
+
+    margin: 5px 6px;
+}
+
+
+/* Mobile */
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: 75vh;
+        padding: 60px 15px;
+    }
+
+    .hero-content {
+        width: 95%;
+        padding: 45px 25px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        letter-spacing: 1px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-content::after {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+}
 /* =========================================================
    BUTTONS
 ========================================================= */
