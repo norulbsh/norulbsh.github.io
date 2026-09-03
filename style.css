@@ -111,7 +111,204 @@ nav a:hover {
     bottom: -150px;
     right: -100px;
 }
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+/* =========================================================
+   HERO - NORULBSH ART GALLERY
+========================================================= */
+
+.hero {
+    min-height: 82vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background:
+        /* subtle canvas texture */
+        repeating-linear-gradient(
+            0deg,
+            rgba(120, 85, 55, 0.025) 0px,
+            rgba(120, 85, 55, 0.025) 1px,
+            transparent 1px,
+            transparent 4px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(120, 85, 55, 0.02) 0px,
+            rgba(120, 85, 55, 0.02) 1px,
+            transparent 1px,
+            transparent 5px
+        ),
+        #f5eee4;
+}
+
+
+/* =========================================================
+   LARGE ABSTRACT PAINT STROKE - LEFT
+========================================================= */
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 520px;
+    height: 180px;
+
+    left: -120px;
+    top: 120px;
+
+    background:
+        linear-gradient(
+            100deg,
+            rgba(170, 100, 70, 0.18),
+            rgba(190, 135, 65, 0.10),
+            transparent
+        );
+
+    transform: rotate(-18deg);
+
+    border-radius: 45% 55% 40% 60%;
+
+    filter: blur(1px);
+}
+
+
+/* =========================================================
+   ABSTRACT PAINT STROKE - RIGHT
+========================================================= */
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 200px;
+
+    right: -130px;
+    bottom: 100px;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(120, 70, 45, 0.10),
+            rgba(184, 134, 59, 0.20)
+        );
+
+    transform: rotate(-22deg);
+
+    border-radius: 55% 45% 60% 40%;
+
+    filter: blur(1px);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+    max-width: 900px;
+
+    position: relative;
+    z-index: 5;
+
+    padding: 50px 60px;
+
+    background:
+        rgba(255, 252, 247, 0.78);
+
+    border: 1px solid rgba(184, 134, 59, 0.25);
+
+    box-shadow:
+        0 25px 60px rgba(70, 45, 30, 0.12);
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* =========================================================
+   ARTISTIC FRAME
+========================================================= */
+
+.hero-content::before {
+    content: "";
+
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+
+    border: 1px solid rgba(184, 134, 59, 0.22);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero h1 {
+    font-size: 58px;
+
+    color: #5b3321;
+
+    margin-bottom: 15px;
+
+    letter-spacing: 1px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   GOLD TAGLINE
+========================================================= */
+
+.hero h2 {
+    font-size: 27px;
+
+    font-weight: normal;
+
+    color: #b27d2f;
+
+    margin-bottom: 22px;
+
+    letter-spacing: 1px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero p {
+    font-size: 19px;
+
+    max-width: 720px;
+
+    margin: 0 auto 32px;
+
+    color: #514842;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .hero-content {
     max-width: 900px;
     position: relative;
