@@ -765,3 +765,24 @@ footer p {
         font-size: 14px;
     }
 }
+
+
+/* =========================
+   LARGE LOGO ON HOME
+========================= */
+
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.hero-image img {
+    width: min(700px, 90%);
+    height: auto;
+    max-height: 550px;
+    object-fit: contain;
+    display: block;
+}
