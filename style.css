@@ -786,3 +786,92 @@ footer p {
     object-fit: contain;
     display: block;
 }
+
+/* =================================
+   NORULBSH LARGE HOME HERO
+================================= */
+
+.hero {
+    min-height: 90vh;
+    padding: 50px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* LARGE LOGO */
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.hero-image img {
+    width: min(900px, 95%);
+    max-height: 65vh;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* TEXT */
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-content h1 {
+    font-size: clamp(32px, 5vw, 60px);
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: clamp(20px, 3vw, 32px);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 auto 30px;
+    max-width: 750px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+        padding: 40px 15px 60px;
+    }
+
+    .hero-image img {
+        width: 95%;
+        max-height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content h2 {
+        font-size: 22px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+}
